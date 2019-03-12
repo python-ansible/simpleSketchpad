@@ -1,0 +1,25 @@
+#canvas {
+    background: green;
+}
+
+body {
+    margin: 0;
+}
+
+.actions {
+    position: fixed; /*相对于视口定位*/
+    left: 0;
+    bottom: 0;
+}
+
+.actions > #brush {
+    display: none;
+}
+
+.actions.x > #brush {
+    display: inline-block;
+}
+
+.actions.x > #eraser {
+    display: none;
+}
