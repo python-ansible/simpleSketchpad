@@ -1,25 +1,116 @@
 #canvas {
-    background: green;
+    background: white;
 }
 
 body {
-    margin: 0;
+    overflow: hidden; /*禁用滚动*/
 }
 
 .actions {
     position: fixed; /*相对于视口定位*/
     left: 0;
-    bottom: 0;
+    top: 0;
+    padding: 20px;
 }
 
-.actions > #brush {
-    display: none;
+.actions svg {
+    weight: 1.5em;
+    height: 1.5em;
+    margin: 0 10px;
+    transition: all 0.3s;
 }
 
-.actions.x > #brush {
-    display: inline-block;
+.actions svg.active {
+    transform: scale(1.2);
+    fill: red;
+}
+/*.actions > #brush {*/
+    /*display: none;*/
+/*}*/
+
+/*.actions.x > #brush {*/
+    /*display: inline-block;*/
+/*}*/
+
+/*.actions.x > #eraser {*/
+    /*display: none;*/
+/*}*/
+
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
 }
 
-.actions.x > #eraser {
-    display: none;
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+ol,ul {
+    list-style: none;
+}
+
+.colors {
+    position: fixed;
+    top: 60px;
+    left: 16px;
+}
+
+.colors li {
+    width: 20px;
+    height: 20px;
+    margin: 10px;
+    border-radius: 50%;
+    box-shadow: 0 0 3px rgba(0,0,0,0.25);
+    transition: all 0.3s;
+}
+
+.colors > li.black {
+    background: black;
+}
+
+.colors > li.red {
+    background: red;
+}
+
+.colors > li.green {
+    background: green;
+}
+
+.colors > li.blue {
+    background: blue;
+}
+
+.colors > li.active {
+    box-shadow: 0 0 3px rgba(0,0,0,0.95);
+    transform: scale(1.2);
+}
+
+.sizes {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+}
+
+.sizes > li {
+    margin: 15px 0;
+}
+
+.sizes > li.thin {
+    height: 0px;
+    width: 20px;
+    border-top: 3px solid grey;
+}
+
+.sizes > li.thick {
+    height: 0px;
+    width: 20px;
+    border-top: 5px solid grey;
+}
+
+.sizes > li.active {
+    border-color: black;
 }
