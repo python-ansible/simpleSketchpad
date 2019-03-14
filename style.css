@@ -1,9 +1,12 @@
 #canvas {
     background: white;
+    position: fixed; /*禁用滚动*/
+    top: 0;
+    left: 0;
 }
 
 body {
-    overflow: hidden; /*禁用滚动*/
+    overflow: hidden; /*禁用滚动没有用*/
 }
 
 .actions {
